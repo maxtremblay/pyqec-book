@@ -275,27 +275,6 @@ with the following imports.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mf">4e6</span><span class="n">ceed659ac</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pyqec.sparse</span> <span class="kn">import</span> <span class="n">BinaryMatrix</span><span class="p">,</span> <span class="n">BinaryVector</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">pyqec.classical</span> <span class="kn">import</span> <span class="n">LinearCode</span><span class="p">,</span> <span class="n">BinarySymmetricChannel</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">pyqec.experiments</span> <span class="kn">import</span> <span class="n">ClassicalDecodingExperiment</span><span class="p">,</span> <span class="n">Laboratory</span>
-
-<span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pyqec</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">classical</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">experiments</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">sparse</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-
-<span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pyqec</span><span class="o">/</span><span class="n">classical</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">.pyqec</span> <span class="kn">import</span> <span class="n">LinearCode</span><span class="p">,</span> <span class="n">BinarySymmetricChannel</span><span class="p">,</span> <span class="n">FlipDecoder</span>
-
-<span class="ne">ImportError</span>: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.33&#39; not found (required by /opt/hostedtoolcache/Python/3.9.1/x64/lib/python3.9/site-packages/pyqec/pyqec.cpython-39-x86_64-linux-gnu.so)
-</pre></div>
-</div>
-</div>
 </div>
 <p>I strongly suggest that you try to follow along and to run
 the code snippets.</p>
@@ -505,6 +484,16 @@ of all that.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Statistics
+----------
+sample size: 1000
+failure rate: 0.586
+success rate: 0.414
+uncertainty: 0.015575750383207866
+</pre></div>
+</div>
+</div>
 </div>
 <p>Since we want to say the change in failure rate for different probabilities,
 we should create a function to rapidly create a new experiment.</p>
@@ -566,6 +555,9 @@ Would you believe that?</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/first_simulation_21_0.png" src="../../_images/first_simulation_21_0.png" />
 </div>
 </div>
 <p>You worked hard to get this nice figure.
